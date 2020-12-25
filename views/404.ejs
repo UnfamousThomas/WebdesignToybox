@@ -5,17 +5,41 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="/public/js/404errorScript.js"></script>
     <link rel="stylesheet" type="text/css" href="public/styles/style.css">
-
+    <style>
+        .pin {
+            top: 0;
+            right: 0;
+            left: 0;
+            bottom: 0;
+        }
+    </style>
 </head>
-<body>
-    <div class="h-screen w-screen bg-blue-500 flex justify-center content-center flex-wrap">
-        <p class="font-sans text-white text-8xl">404!</p>
-    </div>
+<body class="antialiased font-sans">
+<!--    <div class="h-screen w-screen bg-blue-500 flex justify-center content-center flex-wrap">
+        <p class="animate-bounce font-sans text-white text-8xl">404!</p>
 
-    <div class="absolute w-screen bottom-0 mb-8 text-white text-center font-sans text-xl font-mono">
-        <span class="opacity-60">Take me back to</span>
-        <a class="border-b" href="localhost:90">localhost:90</a>
+        <div class="absolute bottom-0 mb-8 text-white font-sans text-xl font-mono">
+            <span class="opacity-60">Take me back to</span>
+            <a class="border-b" href="localhost:90">localhost:90</a>
+        </div>
+    </div>-->
+<div class="md:flex min-h-screen">
+    <div class="w-full md:w-1/2 bg-white flex items-center justify-center">
+        <div class="max-w-md m-8">
+            <div class="text-gray-700 text-6xl md:text-6xl font-black">404</div>
+            <div class="w-16 h-1 bg-purple-900 my-3 md:my-6"></div>
+            <div class="text-gray-900 text-3xl md:text-4xl font-light mb-9 leading-normal">Whoops. That page was not found.</div>
+            <a href="/">
+                <button class="bg-transparent text-gray-900 font-bold uppercase tracking-wide py-3 px-6 border-gray-600 border-2 hover:border-gray-300 rounded-lg">
+                    Go Home
+                </button>
+            </a>
+        </div>
     </div>
+    <div class="relative pb-5 md:flex md:pb-0 md:min-h-screen w-full md:w-1/2">
+        <div style="background-image: url('/public/images/desert.jpg')" class="absolute pin bg-cover bg-no-repeat md:bg-left lg:bg-center"></div>
+    </div>
+</div>
 
 </body>
 </html>
